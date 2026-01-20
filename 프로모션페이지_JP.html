@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCREENX JAPAN | 270°パノラマ・オフィシャルサイト</title>
+    <style>
+        :root {
+            --primary-color: #e50914; /* SCREENX ブランドカラー */
+            --bg-dark: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-light: #ffffff;
+            --text-gray: #a0a0a0;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+            word-break: keep-all;
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), 
+                        url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: var(--text-gray);
+            max-width: 800px;
+            font-weight: 300;
+        }
+
+        /* セクション共通スタイル */
+        .section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 60px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        /* テクノロジー紹介グリッド */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 4px;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background: #252525;
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* コンテンツリスト */
+        .content-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .content-info {
+            padding: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 2px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* 劇場リストテーブル */
+        .theater-list {
+            margin-top: 40px;
+            overflow-x: auto;
+        }
+
+        .theater-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            min-width: 600px;
+        }
+
+        .theater-table th, .theater-table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        .theater-table th {
+            background: #222;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .btn-booking {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-booking:hover {
+            background-color: #ff0000;
+            box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
+        }
+
+        /* フッター */
+        footer {
+            text-align: center;
+            padding: 80px 20px;
+            background: #000;
+            border-top: 1px solid #222;
+        }
+
+        .partner-logos {
+            margin-bottom: 30px;
+            opacity: 0.6;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div style="letter-spacing: 0.5em; margin-bottom: 10px; font-weight: bold; color: var(--primary-color);">BEYOND THE FRAME</div>
+        <h1>SCREENX JAPAN</h1>
+        <p>視界の限界を超え、物語の深淵へ。270度パノラマが創り出す、かつてない没入体験をその手に。</p>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">SCREENXの革新</h2>
+        <div class="tech-grid">
+            <div class="card">
+                <h3>世界初の3面マルチ上映</h3>
+                <p>正面スクリーンに加え、左右の壁面まで映像を投影。270度の視界があなたを映画の世界へ引き込みます。</p>
+            </div>
+            <div class="card">
+                <h3>デバイスレスの拡張現実</h3>
+                <p>専用ゴーグルは不要。人間の視야角を最大限に活用した設計で、自然かつ圧倒的な臨場感を実現しました。</p>
+            </div>
+            <div class="card">
+                <h3>進化した映像演出</h3>
+                <p>ライブ、アニメ、アクション。各ジャンルに特化した専用編集により、通常の劇場では味わえない感動を提供します。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #111;">
+        <h2 class="section-title">上映中の作品</h2>
+        <div class="content-list">
+            <div class="content-card">
+                <div class="content-info">
+                    <span class="tag">CONCERT</span>
+                    <h3>IDOL LIVE: UNITE</h3>
+                    <p>会場を包み込む270度の歓声。最前列を超える熱狂を体感せよ。</p>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="content-info">
+                    <span class="tag">MOVIE</span>
+                    <h3>THE SPACE 2026</h3>
+                    <p>視界を覆う銀河の輝き。宇宙船のコックピットにいるかのような体験。</p>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="content-info">
+                    <span class="tag">ANIME</span>
+                    <h3>蒼い空の彼方</h3>
+                    <p>アニメーションの枠を超えた映像美。その世界観に完全没入。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">劇場・チケット予約</h2>
+        <div class="theater-list">
+            <table class="theater-table">
+                <thead>
+                    <tr>
+                        <th>エリア</th>
+                        <th>劇場名</th>
+                        <th>上映状況</th>
+                        <th>チケット</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>東京</td>
+                        <td>ユナイテッド・シネマ アクアシティお台場</td>
+                        <td>上映中</td>
+                        <td><a href="#" class="btn-booking">チケット購入</a></td>
+                    </tr>
+                    <tr>
+                        <td>東京</td>
+                        <td>TOHOシネマズ 池袋</td>
+                        <td>上映中</td>
+                        <td><a href="#" class="btn-booking">チケット購入</a></td>
+                    </tr>
+                    <tr>
+                        <td>大阪</td>
+                        <td>109シネマズ箕面</td>
+                        <td>上映중</td>
+                        <td><a href="#" class="btn-booking">チケット購入</a></td>
+                    </tr>
+                    <tr>
+                        <td>福岡</td>
+                        <td>ユナイテッド・シネマ キャナルシティ13</td>
+                        <td>近日公開</td>
+                        <td><a href="#" class="btn-booking" style="background-color: #444;">先行予約</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="partner-logos">
+            UNITED CINEMAS / TOHO CINEMAS / 109 CINEMAS
+        </div>
+        <p style="color: #666; font-size: 0.8rem;">&copy; 2026 SCREENX JAPAN. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
